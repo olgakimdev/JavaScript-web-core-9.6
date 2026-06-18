@@ -1,0 +1,39 @@
+.top-panel {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 20px;
+    
+    span:last-child {
+    visibility: hidden;
+}
+}
+
+.panel {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    background-color: #fff;
+    }
+
+span {
+    font-size: 16px;
+    font-weight: 700;
+    }
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff4da6;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+      }
+    }
+
