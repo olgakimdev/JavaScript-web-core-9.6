@@ -1,0 +1,25 @@
+@use 'variables' as *;
+
+/*.grid-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.service-content {
+    flex: 1;
+}
+
+.image {
+    width: 530px; 
+    height: auto;
+    flex-shrink: 0;
+}
+
+.read-more {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+}

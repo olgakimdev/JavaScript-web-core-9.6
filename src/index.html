@@ -8,24 +8,24 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <link rel="stylesheet" href="scss/style.css">
     <title>CPS</title>
   </head>
   <body>
-   
+  <main class="page">
                                  <!-- ЛЕВЫЙ КОНТЕЙНЕР -->
-  <div class="left">
-    <main class="page">
+    <div class="left">
       <div class="top-menu">
-         <img src="img/burger.svg" alt="burger">
+         <img src="img/burger.svg" alt="burger" class="menu-close">
          <img src="img/group.svg" alt="group">
          <img src="img/search.svg" alt="search">
       </div>
       <div class="nav-container">
            <div class="nav-title">
-               <img src="img/highlight.svg">
+               <img src="img/highlight.svg" alt="highlight">
                <span>Ремонт техники</span>
            </div>
-           <ul class="bottom-menu">
+           <ul class="bottom-menu"> 
                <li>Услуги и сервисы</li>
                <li>Корпоративным клиентам</li>
                <li>Продавцам техники</li>
@@ -48,21 +48,20 @@
                    <button>CH</button>
                </div>
             </footer>
-      </div>
-    </main>
+     </div>
   </div>
 
                                  <!-- ПРАВЫЙ КОНТЕЙНЕР -->
 <div class="right">
                                <!-- БЛОК УСЛУГИ И СЕРВИСЫ -->
-    <main class="page">
+    <section class="service-block">
       <div class="nav-container">
            <img src="img/burger.svg" alt="burger" class="burger">
            <img src="img/divider.svg" alt="divider" class="mobile-hidden">
            <img src="img/group.svg" alt="logo" class="logo">
-           <img src="img/call.svg" alt="call" class="mobile-hidden">
-           <img src="img/chat.svg" alt="chat" class="mobile-hidden">
-           <img src="img/profile.svg" alt="profile" class="mobile-hidden">
+           <img src="img/call.svg" alt="call" class="mobile-hidden call">
+           <img src="img/chat.svg" alt="chat" class="mobile-hidden tablet-only">
+           <img src="img/profile.svg" alt="profile" class="mobile-hidden tablet-only">
            <img src="img/splitter.svg" alt="splitter" class="splitter">
            <img src="img/repair.svg" alt="repair" class="repair">
            <img src="img/checkstatus.svg" alt="check" class="check">
@@ -75,7 +74,7 @@
           <div class="laptop-label">
               <span>Оставить заявку</span>
               <img src="img/repair.svg" alt="repair" class="repair">
-              <span>Статус заявки</span>
+              <span>Статус ремонта</span>
               <img src="img/checkstatus.svg" alt="check" class="check">
           </div>
         </div>
@@ -100,12 +99,12 @@
         </div>
 
           <img src="img/MG_3223.png" class="image" alt="image">
+        </div>
       </div>
-    </div>
-    </main>
-   </div>
+    </section>
+   
                                   <!-- БЛОК РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫЙ БРЕНДОВ -->
-   <div class="repair">
+   <div class="repair-title">
     <h1>РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h1>
     </div>
 
@@ -113,53 +112,53 @@
 
                                          <!--СЕТКА ДЛЯ ПК И ПЛАНШЕТА -->
 <div class="brands">
-    <div class="btn">
+    <button class="btn">
            <img src="img/lenovo.svg" alt="Lenovo">
            <img src="img/go.svg" alt="go" width="40px">
-    </div>
-    <div class="btn">
+    </button>
+    <button class="btn">
            <img src="img/samsung.svg" alt="Samsung">
            <img src="img/go.svg" alt="go" width="40px">
-    </div>
-    <div class="btn">
+    </button>
+    <button class="btn">
            <img src="img/apple.svg" alt="apple">
            <img src="img/go.svg" alt="go" width="40px">
-    </div>
-    <div class="btn">
+    </button>
+    <button class="btn">
            <img src="img/viewsonic.svg" alt="viewsonic">
            <img src="img/go.svg" alt="go" width="40px">
-    </div>
-    <div class="btn">
+    </button>
+    <button class="btn">
            <img src="img/bosch.svg" alt="bosch">
            <img src="img/go.svg" alt="go" width="40px">
-    </div>
-    <div class="btn">
+    </button>
+    <button class="btn">
            <img src="img/hp.svg" alt="hp">
            <img src="img/go.svg" alt="go" width="40px">
-    </div>
-    <div class="btn">
+    </button>
+    <button class="btn">
            <img src="img/acer.svg" alt="acer">
            <img src="img/go.svg" alt="go" width="40px">
-    </div>
-    <div class="btn">
+    </button>
+    <button class="btn">
            <img src="img/sony.svg" alt="sony">
            <img src="img/go.svg" alt="go" width="40px">
-    </div>
-    <div class="btn">
+    </button>
+    <button class="btn">
            <img src="img/lenovo.svg" alt="lenovo">
            <img src="img/go.svg" alt="go" width="40px">
-    </div>
-    <div class="btn">
+    </button>
+    <button class="btn">
            <img src="img/samsung.svg" alt="samsung">
            <img src="img/go.svg" alt="go" width="40px">
-    </div>
-    <div class="btn">
+    </button>
+    <button class="btn">
            <img src="img/apple.svg" alt="apple">
            <img src="img/go.svg" alt="go" width="40px">
-    </div>
+    </button>
 </div>
 
-<button id="showhidden">
+<button class="showhidden">
         <img src="img/expand.svg" alt="down">
         Показать все
    </button>
@@ -259,52 +258,49 @@
     </div>
 </div>
 
-<button id="showhidden">
+<button class="showhidden">
         <img src="img/expand.svg" alt="down">
         Показать все
    </button>
 
                                             <!--swiper в моб версии -->
 
-   <div class="mobile-swiper swiper swiper-initialized swiper-horizontal">
-     <div class="swiper-wrapper" id="swiper-wrapper-9de9d95c5dc218d7" aria-live="polite" style="transform: translate3d(0px, 0px, 0px);"> 
+   <div class="mobile-swiper swiper">
+     <div class="swiper-wrapper"> 
 
-       <div class="btn swiper-slide swiper-slide-active" role="group" aria-label="1 / 11" style="margin-right: 16px;">
+       <div class="btn swiper-slide">
            <button>Ремонт ноутбуков</button>
            <img src="img/go.svg" alt="go" width="40px">
        </div>
-       <div class="btn swiper-slide swiper-slide-next" role="group" aria-label="2 / 11" style="margin-right: 16px;">
+       <div class="btn swiper-slide">
             <button>Ремонт планшетов</button>
            <img src="img/go.svg" alt="go" width="40px">
        </div>
-       <div class="btn swiper-slide" role="group" aria-label="3 / 11" style="margin-right: 16px;">
+       <div class="btn swiper-slide">
            <button>Ремонт ПК</button>
            <img src="img/go.svg" alt="go" width="40px">
        </div>
-       <div class="btn swiper-slide" role="group" aria-label="4 / 11" style="margin-right: 16px;">
+       <div class="btn swiper-slide">
            <button>Ремонт мониторов</button>
            <img src="img/go.svg" alt="go" width="40px">
        </div>
-       <div class="btn swiper-slide" role="group" aria-label="5 / 11" style="margin-right: 16px;">
+       <div class="btn swiper-slide">
            <button>Ремонт ноутбуков</button>
            <img src="img/go.svg" alt="go" width="40px">
        </div>
-       <div class="btn swiper-slide" role="group" aria-label="6 / 11" style="margin-right: 16px;">
+       <div class="btn swiper-slide">
            <button>Ремонт планшетов</button>
            <img src="img/go.svg" alt="go" width="40px">
        </div>
-       <div class="btn swiper-slide" role="group" aria-label="7 / 11" style="margin-right: 16px;">
+       <div class="btn swiper-slide">
            <button>Ремонт ПК</button>
            <img src="img/go.svg" alt="go" width="40px">
        </div>
   </div>
 
-                                              <!--блок пагинации-->     
-     <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal swiper-pagination-lock"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span></div>
-   <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-    
-</div>
-
+                       <!--блок пагинации-->     
+  <div class="swiper-pagination"></div>
+  </div>
                                <!-- БЛОК ЦЕНА НА УСЛУГИ -->   
 <div class="price">
     <h1>ЦЕНЫ НА УСЛУГИ</h1>
@@ -350,7 +346,37 @@
           <button>Заказать</button>
 </div>
 
-</div>      
+</div> 
+</div>
+</main>     
          <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>                      
-  </body>
+         
+         <script>
+  document.querySelectorAll('.mobile-swiper').forEach((slider) => {
+    new Swiper(slider, {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      pagination: {
+        el: slider.querySelector('.swiper-pagination'),
+        clickable: true
+      }
+    });
+  });
+</script>
+
+<script>
+  const leftMenu = document.querySelector('.left');
+  const burger = document.querySelector('.service-block .burger');
+  const menuClose = document.querySelector('.menu-close');
+
+  burger.addEventListener('click', () => {
+    leftMenu.classList.add('left--open');
+  });
+
+  menuClose.addEventListener('click', () => {
+    leftMenu.classList.remove('left--open');
+  });
+</script>
+
+        </body>
 </html>
