@@ -1,47 +1,47 @@
 @use 'variables' as *;
 
-
-
-/* на ПК показываются первые 7 карточек */
-.brands .btn:nth-child(n + 8) {
-    display: none;
+/* на ПК показываются первые 8 карточек */
+.brands .btn:nth-child(n + 9) {
+  display: none;
 }
 
 /* моб свайпер не виден/скрыт */
 .mobile-swiper.swiper {
-    display: none;
+  display: none;
 }
-
-
 
 /* МОБИЛЬНЫЙ */
 
 @media (max-width: 767px) {
-    /* скрываю сетку */
-    .brands {
-        display: none;
-    }
+  /* скрываю сетки */
+  .brands {
+    display: none;
+  }
 
-    /* скрываю кнопку */
-    #clickbutton {
-        display: none;
-    }
+  .type {
+    display: none;
+  }
 
-    /* показываю свайпер */
-    .mobile-swiper.swiper {
-        display: block;
-        padding-bottom: 30px; /* место для пагинации */
-    }
-    
-    .swiper-wrapper .btn {
-        width: 240px;
-        display: flex;
-    }
+  /* скрываю кнопку */
+  #clickbutton {
+    display: none;
+  }
 
-    /* блок пагинации */
-    .swiper-pagination {
-        position: static;
-        margin-top: 16px;
-        text-align: center;
+  /* показываю свайпер */
+  .mobile-swiper.swiper {
+    display: block;
+    padding-bottom: 30px; /* место для пагинации */
+  }
+
+  .swiper-wrapper .btn {
+    width: 240px;
+    display: flex;
+  }
+
+  /* блок пагинации */
+  .swiper-pagination {
+    position: static;
+    margin-top: 16px;
+    text-align: center;
+  }
 }
-}  
