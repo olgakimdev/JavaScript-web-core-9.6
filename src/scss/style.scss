@@ -8,6 +8,8 @@
 
 @use 'about';
 
+@use 'swipers';
+
 @font-face {
   font-family: 'TT Lakes';
   src: url('../fonts/TTLakes-Regular.woff');
@@ -22,7 +24,7 @@
 
 body,
 body * {
-  font-family: 'TT Lakes', sans-serif;
+  font-family: $font-main;
   color: #1b1c21;
 }
 
@@ -47,14 +49,22 @@ body * {
 }
 
 .service-title {
-    margin: 24px 0;
+  display: flex;
+  align-items: center;
+  margin: 24px 0;
 }
 
 .service-button {
-    margin-bottom: 24px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.repair-title {
+    background: linear-gradient(to right, #F8F8F8, #ffffff);
+    border-top: 1px solid #D9FFF5;
+    margin: 20px 0 20px;
 }
 
 .service-button button,
@@ -67,6 +77,7 @@ body * {
   background-color: transparent;
   color: #1b1c21;
   border: none;
+  padding: 20px 0;
 }
 
 .brands {
@@ -119,10 +130,11 @@ body * {
   align-self: flex-end;
 }
 
-.repair-title h1,
-.repair h1,
-.price h1 {
+.repair-title h1 {
+  color: #7E7E82;
   font-weight: 400;
+  font-size: 18px;
+  padding: 20px 0;
 }
 
 .service-title h1,
@@ -130,15 +142,23 @@ body * {
   font-weight: 700;
 }
 
-.repair-title h1,
-.repair h1,
-.price h1,
-.top-panel span {
-  color: #7e7e82;
-  font-weight: 400;
+.top-panel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+}
+
+.panel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  list-style: none;
 }
 
 .panel button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   border-radius: 20px;
   color: #ffffff;
 }
@@ -154,8 +174,18 @@ body * {
   margin-left: auto;
 }
 
+.vat{
+  width: 421px;
+  padding: 20px 0;
+}
 
-                         /* Полная версия */
+.policy {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+}
+
+/* Полная версия */
 
 @media (min-width: 1120px) {
   .service-block > .nav-container {
@@ -169,51 +199,49 @@ body * {
   }
 
   .service-title {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
-}
+  }
 
   .title-left {
     display: flex;
     align-items: center;
     gap: 12px;
     flex: 1;
-}
+  }
 
   .laptop-label {
     display: flex;
     align-items: center;
     gap: 12px;
     flex-shrink: 0;
-}
+  }
 
-.grid-box {
+  .grid-box {
     display: flex;
     align-items: flex-start;
     gap: 32px;
-}
+  }
 
-.service-content {
+  .service-content {
     flex: 1;
-}
+  }
 
-.image {
-    width: 530px; 
+  .image {
+    width: 530px;
     height: auto;
     flex-shrink: 0;
-}
+  }
 
-.read-more {
+  .read-more {
     display: flex;
     align-items: center;
     gap: 8px;
     margin-top: 16px;
-}
+  }
 }
 
-                         /* Мобильная версия */
+/* Мобильная версия */
 
 @media (max-width: 767px) {
   .service-block .mobile-hidden {
@@ -251,40 +279,39 @@ body * {
     width: 100%;
   }
 
-  .service-title {
-    display: flex;
-    align-items: center;
-}
-
-.service-title h1 {
+  .service-title h1 {
     margin-right: auto;
-    margin-left: 12px;
-}
+  }
 
-.laptop-label {
+  .laptop-label {
     display: none;
+  }
+
+  .service-button {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .service-button::-webkit-scrollbar {
+    display: none;
+  }
+
+  .service-button button {
+    flex-shrink: 0;
+  }
 }
 
-.service-button {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 8px;
-
-        scrollbar-width: none; 
-        -webkit-overflow-scrolling: touch;
-    }
-
-.service-button::-webkit-scrollbar {
-        display: none;
-    }
-
-.service-button button {
-        flex-shrink: 0;
-    }
+/*.vat{
+  width: 100%;
 }
 
-                                /* Планшетная версия */
+
+/* Планшетная версия */
 
 @media (min-width: 768px) and (max-width: 1119px) {
   .service-block > .nav-container {
@@ -316,37 +343,37 @@ body * {
     width: 100%;
   }
 
-  .service-title {
-    display: flex;
-    align-items: center;
-}
-
-.service-title h1 {
+  .service-title h1 {
     margin-right: auto;
     margin-left: 12px;
-}
+  }
 
   .laptop-label {
     display: none;
+  }
+
+  .service-button {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .service-button::-webkit-scrollbar {
+    display: none;
+  }
+
+  .service-button button {
+    flex-shrink: 0;
+  }
 }
 
-.service-button {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 8px;
-
-        scrollbar-width: none; 
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .service-button::-webkit-scrollbar {
-        display: none;
-    }
-
-    .service-button button {
-        flex-shrink: 0;
-    }
-
+#clickbutton{
+background: transparent;
+border: none;
+cursor: pointer;
+padding: 20px 0;
 }
-

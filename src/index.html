@@ -68,9 +68,10 @@
       </div>
       <div class="service-container">
         <div class="service-title">
-          <img src="img/highlight.svg" alt="image" width="4px">
-          <h1>Услуги и сервисы</h1>
-
+          <div class="title-left">
+            <img src="img/highlight.svg" alt="image" width="4px">
+            <h1>Услуги и сервисы</h1>
+          </div>
           <div class="laptop-label">
               <span>Оставить заявку</span>
               <img src="img/repair.svg" alt="repair" class="repair">
@@ -92,10 +93,10 @@
           </p>
           <span class="text-box">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class="text-hidden">, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span>
           </span>
-          <div class="read-more">
+          <button id="clickbutton">
             <img src="img/expand.svg" style="vertical-align: middle; width: 20px;">
-            <span>Читать далее</span>
-          </div>
+            Читать далее
+          </button>
         </div>
 
           <img src="img/MG_3223.png" class="image" alt="image">
@@ -158,7 +159,7 @@
     </button>
 </div>
 
-<button class="showhidden">
+<button id="clickbutton">
         <img src="img/expand.svg" alt="down">
         Показать все
    </button>
@@ -221,7 +222,7 @@
 
                                       <!-- БЛОК РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ -->
 
-<div class="repair">
+<div class="repair-title">
     <h1>РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</h1>
     </div>
 
@@ -258,7 +259,7 @@
     </div>
 </div>
 
-<button class="showhidden">
+<button id="clickbutton">
         <img src="img/expand.svg" alt="down">
         Показать все
    </button>
@@ -302,81 +303,89 @@
   <div class="swiper-pagination"></div>
   </div>
                                <!-- БЛОК ЦЕНА НА УСЛУГИ -->   
-<div class="price">
+<div class="repair-title">
     <h1>ЦЕНЫ НА УСЛУГИ</h1>
     </div>
 
 <div class="box">
                                        <!--сетка для пк и планшета -->
 
-     <div class="top-panel">
-          <span>Ремонтные услуги</span>
-          <span>Цена</span>
-          <span>Срок</span>
-          <span>Заказать</span>       <!--скрыть -->
+     <ul class="top-panel">
+          <li>Ремонтные услуги</li>
+          <li>Цена</li>
+          <li>Срок</li>
+     </ul>
+    <ul class="panel">
+          <li>Диагностика</li>
+          <li>Бесплатно</li>
+          <li>30 мин</li>
+          <li>
+            <button class="button">
+            Заказать
+            <img src="img/goside.svg" alt="goside">
+          </button></li>
+         
+          <li>Замена дисплея</span>
+          <li>1000 р</span>
+          <li>30-120 мин</span>
+          <li>
+            <button class="button">
+            Заказать
+            <img src="img/goside.svg" alt="goside">
+          </button></li>
+
+          <li>Замена полифонического динамика</li>
+          <li>1000 р</li>
+          <li>30-120 мин</li>
+          <li>
+            <button class="button">
+            Заказать
+            <img src="img/goside.svg" alt="goside">
+          </button></li>
+
+          <li>Тестирование с выдачей технического заключения</li>
+          <li>1000 р</li>
+          <li>30-120 мин</li>
+          <li>
+            <button class="button">
+            Заказать
+            <img src="img/goside.svg" alt="goside">
+          </button></li>
+
+          <li>Замена программного обеспечения</li>
+          <li>1000 р</li>
+          <li>30-120 мин</li>
+          <li>
+            <button class="button">
+            Заказать
+            <img src="img/goside.svg" alt="goside">
+          </button></li>
+</ul >
+
+<div class="vat">
+  <span>Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.
+  </span>
 </div>
-    <div class="panel">
-          <span>Диагностика</span>
-          <span>Бесплатно</span>
-          <span>30 мин</span>
-          <button>Заказать</button>
-</div>
-   <div class="panel">
-          <span>Замена дисплея</span>
-          <span>1000 р</span>
-          <span>30-120 мин</span>
-          <button>Заказать</button>
-</div>
-<div class="panel">
-          <span>Замена полифонического динамика</span>
-          <span>1000 р</span>
-          <span>30-120 мин</span>
-          <button>Заказать</button>
-</div>
-<div class="panel">
-          <span>Тестирование с выдачей технического заключения</span>
-          <span>1000 р</span>
-          <span>30-120 мин</span>
-          <button>Заказать</button>
-</div>
-<div class="panel">
-          <span>Замена программного обеспечения</span>
-          <span>1000 р</span>
-          <span>30-120 мин</span>
-          <button>Заказать</button>
-</div>
+
+<button id="clickbutton">
+  Получить коммерческое предложение
+  <img src="img/dropdown.svg" alt="dropdown">
+</button>
+
+
+  <ul class="policy">
+    <li>© 2019 CPS
+Разработано командой Apesong </li>
+    <li>Политика конфиденциальности</li>
+    <li>Информация, размещенная на данной странице, не является публичной офертой</li>
+  </ul>
 
 </div> 
 </div>
 </main>     
-         <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>                      
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>                      
          
-         <script>
-  document.querySelectorAll('.mobile-swiper').forEach((slider) => {
-    new Swiper(slider, {
-      slidesPerView: 'auto',
-      spaceBetween: 16,
-      pagination: {
-        el: slider.querySelector('.swiper-pagination'),
-        clickable: true
-      }
-    });
-  });
-</script>
-
-<script>
-  const leftMenu = document.querySelector('.left');
-  const burger = document.querySelector('.service-block .burger');
-  const menuClose = document.querySelector('.menu-close');
-
-  burger.addEventListener('click', () => {
-    leftMenu.classList.add('left--open');
-  });
-
-  menuClose.addEventListener('click', () => {
-    leftMenu.classList.remove('left--open');
-  });
-</script>
-
-        </body>
+<script src="./../index.js"></script> 
+</body>
 </html>

@@ -1,0 +1,47 @@
+@use 'variables' as *;
+
+
+
+/* на ПК показываются первые 7 карточек */
+.brands .btn:nth-child(n + 8) {
+    display: none;
+}
+
+/* моб свайпер не виден/скрыт */
+.mobile-swiper.swiper {
+    display: none;
+}
+
+
+
+/* МОБИЛЬНЫЙ */
+
+@media (max-width: 767px) {
+    /* скрываю сетку */
+    .brands {
+        display: none;
+    }
+
+    /* скрываю кнопку */
+    #clickbutton {
+        display: none;
+    }
+
+    /* показываю свайпер */
+    .mobile-swiper.swiper {
+        display: block;
+        padding-bottom: 30px; /* место для пагинации */
+    }
+    
+    .swiper-wrapper .btn {
+        width: 240px;
+        display: flex;
+    }
+
+    /* блок пагинации */
+    .swiper-pagination {
+        position: static;
+        margin-top: 16px;
+        text-align: center;
+}
+}  
