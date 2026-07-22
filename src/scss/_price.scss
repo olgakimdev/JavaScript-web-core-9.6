@@ -1,35 +1,28 @@
 @use 'variables' as *;
 
+/* Desktop */
+@media (min-width: 1120px) {
+
 .top-panel {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    align-items: center;
-    padding: 20px;
-    
-    span:last-child {
-    visibility: hidden;
-}
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  list-style: none;
 }
 
 .panel {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 25px;
+  list-style: none;
+}
+
+.panel button {
+    display: flex;
     align-items: center;
-    padding: 20px;
-    margin-bottom: 10px;
-    border-radius: 12px;
-    background-color: #fff;
-    }
-
-.panel span {
-    font-size: 16px;
-    font-weight: 400;
-    }
-
-button {
+    gap: 5px;
     padding: 10px 20px;
     border: none;
-    border-radius: 8px;
+    border-radius: 20px;
     background-color: #FF3E79;
     color: #FFFFFF;
     cursor: pointer;
@@ -39,3 +32,31 @@ button {
       }
     }
 
+.table {
+width: 100%;
+background-color: #fff;
+border-radius: 6px;
+}
+
+.vat{
+  width: 421px;
+  padding: 20px 0;
+}
+
+.policy {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+}
+}
+
+/* Laptop */
+@media (min-width: 768px) and (max-width: 1119px) {
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+
+/*карточки товаров*/
+
+}

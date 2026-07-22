@@ -1,0 +1,81 @@
+@use 'variables' as *;
+
+/* Desktop */
+@media (min-width: 1120px) {
+
+.repair-title {
+    background: linear-gradient(to right, #F8F8F8, #ffffff);
+    border-top: 1px solid #D9FFF5;
+    margin: 20px 0 20px;
+}
+
+.repair-title h1 {
+  color: #7E7E82;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 20px 0;
+}
+
+.brands {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.brands button.btn {
+  width: 240px;
+  height: 72px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* на ПК показываются первые 8 карточек */
+.brands .btn:nth-child(n + 9) {
+  display: none;
+}
+
+/* моб свайпер не виден/скрыт */
+.mobile-swiper.swiper {
+  display: none;
+}
+}
+
+/* Laptop */
+@media (min-width: 768px) and (max-width: 1119px) {
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+
+  /* скрываю сетки */
+  div.brands {
+    display: none;
+  }
+
+  .type {
+    display: none;
+  }
+
+   /* показываю свайпер */
+  .mobile-swiper.swiper {
+    display: block;
+    padding-bottom: 30px; /* место для пагинации */
+  }
+
+  .swiper-wrapper .btn {
+    width: 240px;
+    display: flex;
+  }
+
+  /* блок пагинации */
+  .swiper-pagination {
+    position: static;
+    margin-top: 16px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,38 @@
+@use 'variables' as *;
+
+.type {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.type button {
+  background-color: #ffffff;
+  color: #7e7e82;
+}
+
+.type .btn {
+  width: 240px;
+  height: 160px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding: 16px;
+}
+
+.type .btn button {
+  padding: 0;
+  background-color: transparent;
+  color: #1b1c21;
+  border: none;
+}
+
+.type .btn img {
+  align-self: flex-end;
+}

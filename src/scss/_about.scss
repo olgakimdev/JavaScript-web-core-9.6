@@ -1,6 +1,60 @@
 @use 'variables' as *;
 
-/*.grid-box {
+.right {
+  flex: 1;
+  min-width: 0;
+  background: #f8f8f8;
+  padding: 20px 32px;
+}
+
+.service-block > .nav-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.service-title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin: 24px 0;
+}
+
+.title-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+  }
+
+.laptop-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+.service-title h1 {
+  font-weight: 700;
+  margin-right: auto;
+}
+
+.service-button {
+  margin-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.service-button button
+{
+  background-color: #ffffff;
+  color: #7e7e82;
+}
+
+.grid-box {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -11,16 +65,106 @@
     flex: 1;
 }
 
+ /* скрываю кнопку */
+  #clickbutton {
+    display: none;
+  }
+
 .image {
     width: 530px; 
     height: auto;
     flex-shrink: 0;
 }
 
-.read-more {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 16px;
+/* Desktop */
+@media (min-width: 1120px) {
+  .service-block > .nav-container {
+    display: none;
+  }
 }
-    */
+
+/* Laptop */
+@media (min-width: 768px) and (max-width: 1119px) {
+.service-block > .nav-container {
+    display: flex;
+  }
+
+.service-block .call {
+    margin-left: auto;
+  }
+
+.right {
+    width: 100%;
+  }
+
+.service-title h1 {
+    margin-right: auto;
+    margin-left: 12px;
+  }
+
+.laptop-label {
+    display: none;
+  }
+
+.service-button {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+.service-button::-webkit-scrollbar {
+    display: none;
+  }
+
+.service-button button {
+    flex-shrink: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+.right {
+    width: 100%;
+  }
+
+.laptop-label {
+    display: none;
+  }
+
+.service-block .mobile-hidden {
+    display: none;
+  }
+
+  .service-block .splitter,
+  .service-block .repair,
+  .service-block .check {
+    display: block;
+  }
+
+  .service-block .splitter {
+    margin-left: auto;
+  }
+
+ .service-button {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .service-button::-webkit-scrollbar {
+    display: none;
+  }
+
+  .service-button button {
+    flex-shrink: 0;
+  }
+
+}
