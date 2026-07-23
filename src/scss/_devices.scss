@@ -26,6 +26,10 @@
   padding: 16px;
 }
 
+.type .btn.hidden {
+  display: none;
+}
+
 .type .btn button {
   padding: 0;
   background-color: transparent;
@@ -35,4 +39,41 @@
 
 .type .btn img {
   align-self: flex-end;
+}
+
+.top-panel th {
+  color: #7e7e82;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 20px 0;
+  text-align: left;
+}
+
+#show-devices-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: transparent;
+  margin: 20px 0;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  /* скрываю кнопку */
+  #show-devices-btn {
+    display: none;
+  }
+
+  /* скрываю сетки */
+  .type .btn {
+    display: none;
+  }
+
+  .mobile-swiper .btn button {
+    padding: 0;
+    background-color: transparent;
+    color: #1b1c21;
+    border: none;
+  }
 }

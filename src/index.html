@@ -15,7 +15,6 @@
   </head>
   <body>
     <main class="page">
-
       <!-- MENU - ЛЕВЫЙ КОНТЕЙНЕР -->
 
       <div class="left">
@@ -57,7 +56,6 @@
 
       <!-- ABOUT - ПРАВЫЙ КОНТЕЙНЕР -->
       <div class="right">
-
         <!-- БЛОК УСЛУГИ И СЕРВИСЫ -->
 
         <section class="service-block">
@@ -110,7 +108,8 @@
                 </p>
                 <span class="text-box"
                   >Мы успешно работаем с 1992 года и заслужили репутацию
-                  надежного партнера<span class="text-hidden"
+                  надежного партнера
+                  <span class="text-hidden"
                     >, что подтверждает большое количество постоянных клиентов.
                     Мы гордимся тем, что к нам обращаются по рекомендациям и, в
                     свою очередь, советуют нас родным и близким.</span
@@ -131,7 +130,7 @@
         </section>
 
         <!-- BRANDS - БЛОК РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫЙ БРЕНДОВ -->
-        
+
         <div class="repair-title">
           <h1>РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h1>
         </div>
@@ -186,7 +185,7 @@
             </button>
           </div>
 
-          <button id="clickbutton">
+          <button id="show-brands">
             <img src="img/expand.svg" alt="down" />
             Показать все
           </button>
@@ -284,7 +283,7 @@
             </div>
           </div>
 
-          <button id="clickbutton">
+          <button id="show-devices-btn">
             <img src="img/expand.svg" alt="down" />
             Показать все
           </button>
@@ -328,80 +327,173 @@
           </div>
 
           <!-- PRICE - БЛОК ЦЕНА НА УСЛУГИ -->
-          
+
           <div class="repair-title">
             <h1>ЦЕНЫ НА УСЛУГИ</h1>
           </div>
 
           <div class="box">
-
             <!--сетка для пк и планшета -->
-             
+
             <table>
-            <thead> class="top-panel">
-              <tr>
-              <th>Ремонтные услуги</th>
-              <th>Цена</th>
-              <th>Срок</th>
-              <th></th>
-              </tr>
+              <thead class="top-panel">
+                <tr>
+                  <th>Ремонтные услуги</th>
+                  <th>Цена</th>
+                  <th>Срок</th>
+                  <th></th>
+                </tr>
+              </thead>
 
-            </thead>
-            <tbody class="panel">
-              <tr>
-              <td>Диагностика</td>
-              <td>Бесплатно</td>
-              <td>30 мин</td>
+              <tbody class="panel">
+                <tr>
+                  <td>Диагностика</td>
+                  <td>Бесплатно</td>
+                  <td>30 мин</td>
+                  <td>
+                    <button class="button">
+                      Заказать
+                      <img src="img/goside.svg" alt="goside" />
+                    </button>
+                  </td>
+                </tr>
 
-                <button class="button">
-                  Заказать
-                  <img src="img/goside.svg" alt="goside" /> </button
-              ></tr>
+                <tr>
+                  <td>Замена дисплея</td>
+                  <td>1000 р</td>
+                  <td>30-120 мин</td>
+                  <td>
+                    <button class="button">
+                      Заказать
+                      <img src="img/goside.svg" alt="goside" />
+                    </button>
+                  </td>
+                </tr>
 
-              <tr>
-              <td>Замена дисплея</td>
-              <td>1000 р</td>
-              <td>30-120 мин</td>
-              <td>
-                <button class="button">
-                  Заказать
-                  <img src="img/goside.svg" alt="goside" /> </button
-              ></td>
+                <tr>
+                  <td>Замена полифонического динамика</td>
+                  <td>1000 р</td>
+                  <td>30-120 мин</td>
+                  <td>
+                    <button class="button">
+                      Заказать
+                      <img src="img/goside.svg" alt="goside" /> </button
+                  ></td>
+                </tr>
 
-              <tr>
-              <td>Замена полифонического динамика</td>
-              <td>1000 р</td>
-              <td>30-120 мин</td>
-              <td>
-                <button class="button">
-                  Заказать
-                  <img src="img/goside.svg" alt="goside" /> </button
-              ></td>
-              </tr>
+                <tr>
+                  <td>Тестирование с выдачей технического заключения</td>
+                  <td>1000 р</td>
+                  <td>30-120 мин</td>
+                  <td>
+                    <button class="button">
+                      Заказать
+                      <img src="img/goside.svg" alt="goside" /> </button
+                  ></td>
+                </tr>
 
-              <tr>
-              <td>Тестирование с выдачей технического заключения</td>
-              <td>1000 р</td>
-              <td>30-120 мин</td>
-              <td>
-                <button class="button">
-                  Заказать
-                  <img src="img/goside.svg" alt="goside" /> </button
-              ></td>
-              </tr>
-
-              <tr>
-              <td>Замена программного обеспечения</td>
-              <td>1000 р</td>
-              <td>30-120 мин</td>
-              <td>
-                <button class="button">
-                  Заказать
-                  <img src="img/goside.svg" alt="goside" /> </button
-              ></td>
-              </tr>
-            </tbody>
+                <tr>
+                  <td>Замена программного обеспечения</td>
+                  <td>1000 р</td>
+                  <td>30-120 мин</td>
+                  <td>
+                    <button class="button">
+                      Заказать
+                      <img src="img/goside.svg" alt="goside" /> </button
+                  ></td>
+                </tr>
+              </tbody>
             </table>
+
+            <!--swiper в моб версии -->
+
+            <div class="mobile-swiper swiper">
+              <div class="swiper-wrapper">
+                <div class="btn swiper-slide">
+                <div class="P1">
+                  <span>Ремонтные услуги</span>
+                  <span>Диагностика</span>
+                </div>
+                <div class="P1">
+                  <span>Цена</span>
+                  <span>Бесплатно</span>
+                </div>
+                <div class="P1">
+                  <span>Срок</span>
+                  <span>30 мин</span>
+                  <button class="button">
+                    Заказать
+                    <img src="img/goside.svg" alt="goside" />
+                  </button>
+                </div>
+
+                <div class="btn swiper-slide">
+                  <div class="P1">
+                  <span>Ремонтные услуги</span>
+                  <span>Тестирование с выдачей технического заключения</span>
+                  </div>
+                  <div class="P1">
+                  <span>Цена</span>
+                  <span>1000 р</span>
+                  </div>
+                   <div class="P1">
+                  <li>Срок</li>
+                  <li>30-120 мин</li>
+                  <button class="button">
+                    Заказать
+                    <img src="img/goside.svg" alt="goside" />
+                  </button>
+                  </div>
+                </div>
+
+                <ul class="btn swiper-slide">
+                  <li>Ремонтные услуги</li>
+                  <li>Замена дисплея</li>
+                  <li></li>
+                  <li>Цена</li>
+                  <li>1000 р</li>
+                  <li></li>
+                  <li>Срок</li>
+                  <li>30-120 мин</li>
+                 <li><button class="button">
+                    Заказать
+                    <img src="img/goside.svg" alt="goside" />
+                  </button></li>
+                </ul>
+
+                <ul class="btn swiper-slide">
+                  <li>Ремонтные услуги</li>
+                  <li>Замена полифонического динамика</li>
+                  <li></li>
+                  <li>Цена</li>
+                  <li>1000 р</li>
+                  <li></li>
+                  <li>Срок</li>
+                  <li>30-120 мин</li>
+                  <li><button class="button">
+                    Заказать
+                    <img src="img/goside.svg" alt="goside" />
+                  </button></li>
+                </ul>
+
+                <ul class="btn swiper-slide">
+                  <li>Ремонтные услуги</li>
+                  <li>Замена программного обеспечения</li>
+                  <li></li>
+                  <li>Цена</li>
+                  <li>1000 р</li>
+                  <li></li>
+                  <li>Срок</li>
+                  <li>30-120 мин</li>
+                  <li><button class="button">
+                    Заказать
+                    <img src="img/goside.svg" alt="goside" />
+                  </button></li>
+                </ul>
+
+              <!--блок пагинации-->
+              <div class="swiper-pagination"></div>
+            </div>
 
             <div class="vat">
               <span
@@ -411,7 +503,7 @@
               </span>
             </div>
 
-            <button id="clickbutton">
+            <button id="get-more">
               Получить коммерческое предложение
               <img src="img/dropdown.svg" alt="dropdown" />
             </button>

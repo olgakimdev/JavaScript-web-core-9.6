@@ -1,53 +1,106 @@
 @use 'variables' as *;
 
-/* Desktop */
-@media (min-width: 1120px) {
-
-.top-panel {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  list-style: none;
-}
-
-.panel {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 25px;
-  list-style: none;
-}
-
-.panel button {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background-color: #FF3E79;
-    color: #FFFFFF;
-    cursor: pointer;
-
-    &:hover {
-        opacity: 0.8;
-      }
-    }
-
-.table {
-width: 100%;
-background-color: #fff;
-border-radius: 6px;
-}
-
-.vat{
+.vat {
   width: 421px;
   padding: 20px 0;
 }
 
-.policy {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  list-style: none;
+#get-more {
+  border: none;
+  background-color: transparent;
+  margin: 0 0 20px;
+  font-weight: 700;
 }
+
+.policy {
+  display: flex;
+  justify-content: space-between;
+  /*элементы по ширине*/
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.policy li {
+  flex: 1;
+  /*flex: 1, когда 3 элемента в 1 строке, и надо задать выравнивание каждому элементу отдельно*/
+}
+
+.policy li:first-child {
+  text-align: left;
+}
+
+.policy li:nth-child(2) {
+  text-align: center;
+}
+
+.policy li:last-child {
+  text-align: right;
+}
+
+.panel button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 50px;
+  background-color: #ff3e79;
+  color: #ffffff;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+th:first-child,
+td:first-child {
+  width: 40%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 20%;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+  width: 20%;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+  width: 20%;
+}
+
+/* Desktop */
+@media (min-width: 1120px) {
+  .table {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 6px;
+  }
+
+  thead th {
+    padding: 16px 0;
+    text-align: left;
+    color: #7e7e82;
+    font-weight: 500;
+  }
+
+  tbody td {
+    padding: 16px 0;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  tbody tr:last-child {
+    border-bottom: none;
+  }
 }
 
 /* Laptop */
@@ -57,6 +110,35 @@ border-radius: 6px;
 /* Mobile */
 @media (max-width: 767px) {
 
-/*карточки товаров*/
+  /* скрываю таблицу */
+  table {
+    display: none;
+  }
+
+  /*карточки товаров*/
+  .mobile-swiper .btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #ffffff;
+
+  padding: 16px;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  }
+
+  .mobile-swiper ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+  }
+
+  .policy {
+    flex-direction: column;
+    gap: 16px;
+  }
+
 
 }
