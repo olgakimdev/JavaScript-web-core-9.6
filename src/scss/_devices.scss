@@ -70,7 +70,7 @@
     display: none;
   }
 
-  .mobile-swiper .btn button {
+  .mobile-swiper .btn button:not(.go-button) {
     padding: 0;
     background-color: transparent;
     color: #1b1c21;

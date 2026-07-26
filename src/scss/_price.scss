@@ -39,11 +39,12 @@
   text-align: right;
 }
 
-.panel button {
+.go-button {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 5px 15px;
+  gap: 5px;
+  padding: 5px 10px;
+  margin-left: auto;
   border: none;
   border-radius: 50px;
   background-color: #ff3e79;
@@ -109,30 +110,47 @@ td:nth-child(4) {
 
 /* Mobile */
 @media (max-width: 767px) {
-
-  /* скрываю таблицу */
+  /* скрываю таблицу*/
   table {
     display: none;
   }
 
   /*карточки товаров*/
-  .mobile-swiper .btn {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: #ffffff;
 
-  padding: 16px;
-  border: 1px solid #eaeaea;
-  border-radius: 6px;
-  }
-
-  .mobile-swiper ul {
+  .flex-slide {
     display: flex;
     flex-direction: column;
-    list-style: none;
+    gap: 20px;
+    width: 100%;
+
+    & .slide-data {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      span:first-child {
+        color: #7e7e82;
+        font-size: 14px;
+      }
+
+      span:last-child {
+        font-size: 14px;
+      }
+    }
+    .slide-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 20px;
+    }
+  }
+
+  .price-swiper .swiper-slide {
+    height: 220px;
     padding: 15px;
-    margin: 0;
+    text-align: left;
+    align-items: flex-start;
   }
 
   .policy {
@@ -140,5 +158,15 @@ td:nth-child(4) {
     gap: 16px;
   }
 
+  .policy li:first-child {
+    text-align: center;
+  }
 
+  .policy li:nth-child(2) {
+    text-align: center;
+  }
+
+  .policy li:last-child {
+    text-align: center;
+  }
 }
