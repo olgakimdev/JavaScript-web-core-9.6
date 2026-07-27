@@ -13,28 +13,43 @@ document.querySelectorAll('.mobile-swiper').forEach((slider) => {
   })
 })
 
+
+
 /*кнопки бургера, меню*/
 
 const leftMenu = document.querySelector('.left')
+
+//Здесь ищется элемент с классом .burger, который находится внутри .service-block
 const burger = document.querySelector('.service-block .burger')
+
 const menuClose = document.querySelector('.menu-close')
 
+
 burger.addEventListener('click', () => {
-  leftMenu.classList.add('left--open')
-})
+  //Когда жмем кнопку burger...то:
+  
+  leftMenu.classList.add('left--open') //(classList это объект, который позволяет работать с CSS-классами элемента)
+}) //то добавляется класс
+
 
 menuClose.addEventListener('click', () => {
-  leftMenu.classList.remove('left--open')
+  //Когда жмем кнопку закрытия...то:
+
+  leftMenu.classList.remove('left--open') 
+  //то удаляется класс и CSS снова скрывает меню
 })
 
-/*кнопка читать далее*/
 
+
+/*кнопка читать далее*/
 const button = document.querySelector('#clickbutton')
 const hiddenText = document.querySelector('.text-hidden')
 
 button.addEventListener('click', () => {
   hiddenText.classList.toggle('show')
 })
+
+
 
 /*БЛОК BRANDS - кнопка Показать все*/
 

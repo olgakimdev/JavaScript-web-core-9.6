@@ -154,6 +154,16 @@
     width: 100%;
   }
 
+  .grid-box {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .image {
+    min-width: 320px;
+    height: auto;
+  }
+
   .laptop-label {
     display: none;
   }
